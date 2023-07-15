@@ -69,3 +69,10 @@ Git命令：
 
 
 	git pull---将远程仓库的变动更新到本地
+
+
+	git branch 远程仓库名 --delete 远程分支名  ----删除远程分支
+
+	git branch -d 本地分支名  --删除本地分支
+
+	git branch -m 原分支名  新分支名    -----修改本地分支名
