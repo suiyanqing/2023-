@@ -76,3 +76,7 @@ Git命令：
 	git branch -d 本地分支名  --删除本地分支
 
 	git branch -m 原分支名  新分支名    -----修改本地分支名
+
+	git branch   ----查看本地分支
+	git branch -r   ---查看远程分支  -（remote）
+	git branch -a   ---查看所有分支  - （all）
