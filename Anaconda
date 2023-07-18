@@ -1,0 +1,46 @@
+查看Conda版本：
+	conda --version
+查看conda的环境配置：
+	conda config --show
+设置镜像：
+	#设置清华镜像
+	#设置清华镜像
+	conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+	conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+	conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+	conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+	#设置bioconda
+	conda config --add channels bioconda
+	conda config --add channels conda-forge
+	#设置搜索时显示通道地址
+	conda config --set show_channel_urls yes
+
+更新conda:
+	conda update conda
+查询某个命令的帮助：
+	conda create --help
+
+
+管理环境：
+	 Conda允许你创建相互隔离的独立环境，这些环境被称之为虚拟环境
+
+（Virtual Environment），这些环境各自包含属于自己的文件、包以及他们的依存关系，并且不会相互干扰。
+
+        Anaconda有一个缺省的名为base的环境。但是不建议把程序放在base环境中，应该创建不同的虚拟环境分别管理不同的开发项目。这个涉及到一个根本的问题：为什么我们需要虚拟环境呢？举一个简单的例子，想象一下你有多个项目要开发，每个项目中都有一些包要依赖于某个共同的包，但是各自的所需要的版本不一致，有一些需要低版本的，有些需要高版本的。然后你就陷入了众口难调的困境。为不同的项目创建虚拟环境就可以把不同项目隔离开来，各自使用自己所需要的软件环境。
+
+
+创建虚拟环境：
+	conda create -n env_name python=3.8
+	表示创建python版本为3.8，名字为env_name的虚拟环境
+简化命令的安装包（除非是反复执行的脚本）：
+	conda create -n env_name numpy matplotlib python=3.8
+
+查看有哪些虚拟环境：
+	conda env list
+	conda info -e
+	conda info --envs
+
+激活虚拟环境：
+	conda activate env_name
+
+
